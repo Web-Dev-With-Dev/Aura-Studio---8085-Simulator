@@ -14,7 +14,7 @@ The project is migrated from codeplex ([http://8085simulator.codeplex.com/](http
 ## 📥 DIRECT 1-CLICK DOWNLOADS
 
 - **[🚀 Download 1-Click Windows Setup (AuraStudio_Setup_v2.0.exe)](AuraStudio_Setup_v2.0.exe)** ----> 8085 Simulator Version 2 (1-Click Windows Setup Installer)
-- **[🍎 Download 1-Click macOS Package (AURA-Studio-v2.0-macOS.zip)](AURA-Studio-v2.0-macOS.zip)** ----> 1-Click macOS `AURA STUDIO.app` Package (Apple Silicon M1/M2/M3/M4 & Intel Mac)
+- **[🍎 Download 1-Click macOS Disk Image (AuraStudio_v2.0_macOS.dmg)](AuraStudio_v2.0_macOS.dmg)** ----> 1-Click macOS Disk Image (.dmg) for Apple Silicon & Intel Mac
 - **[📦 Download 1-Click Windows Portable (AURA-Studio-v2.0-Windows.zip)](AURA-Studio-v2.0-Windows.zip)** ----> Windows Portable Package (No installation required)
 - **[📄 Download 1-Click PDF Manual (Aura_Studio_Documentation.pdf)](Aura_Studio_Documentation.pdf)** ---> Official 44-Page User & Reference Manual
 
