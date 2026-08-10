@@ -3,155 +3,432 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURA STUDIO | Best 8085 Microprocessor Simulator & Assembly IDE for Windows</title>
-    <meta name="description" content="Download AURA STUDIO 8085 Simulator - The ultimate 8085 microprocessor simulator & assembly IDE for Windows. Features cycle-accurate simulation, 7-Segment display, 8-bit ADC/DAC oscilloscope, stepper motor, traffic light & HD44780 LCD visualizers.">
+    <title>AURA STUDIO — 8085 Microprocessor Simulator & Assembly IDE</title>
+    <meta name="description" content="AURA STUDIO 8085 Simulator - The definitive 8085 microprocessor simulator & assembly IDE for Windows. Cycle-accurate simulation with 7-Segment, ADC/DAC Oscilloscope, Stepper Motor, Traffic Light & HD44780 LCD visualizers.">
     <meta name="keywords" content="8085 simulator, 8085 simulator github, 8085 microprocessor simulator download, 8085 assembly ide, 8085 trainer kit emulator, 8085 simulator windows 11">
     <meta name="author" content="Dev Gondaliya, Dev Letwala, Jigar Ghoghari, Jubin Mitra">
     <meta name="google-site-verification" content="google6ec5c298bafaaaa4">
 
-    <!-- Open Graph for Social & Search Engines -->
-    <meta property="og:title" content="AURA STUDIO - 8085 Microprocessor Simulator & Assembly IDE">
-    <meta property="og:description" content="Download the ultimate 8085 Microprocessor Simulator for Windows with real-time hardware visualizers and cycle-accurate execution.">
-    <meta property="og:type" content="website">
+    <!-- Google Fonts: DM Serif Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
+            --bg-canvas: #f8fafc;
+            --surface-card: #ffffff;
+            --text-heading: #0f172a;
+            --text-body: #475569;
             --text-muted: #94a3b8;
-            --accent-orange: #ea580c;
+            --border-color: #e2e8f0;
+            --border-hover: #cbd5e1;
+            --accent-black: #0f172a;
             --accent-green: #10b981;
-            --accent-blue: #3b82f6;
+            --accent-orange: #ea580c;
+            --shadow-soft: 0 10px 30px -5px rgba(15, 23, 42, 0.05), 0 4px 12px -2px rgba(15, 23, 42, 0.03);
+            --shadow-hover: 0 20px 40px -10px rgba(15, 23, 42, 0.08), 0 8px 16px -4px rgba(15, 23, 42, 0.04);
         }
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
+
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-canvas);
+            color: var(--text-body);
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        header {
-            text-align: center;
-            padding: 40px 0 20px;
-        }
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #f97316, #fb923c);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .subtitle {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            margin-bottom: 30px;
-        }
-        .download-box {
+
+        .navbar {
+            background-color: var(--surface-card);
+            border-bottom: 1px solid var(--border-color);
+            padding: 16px 32px;
             display: flex;
-            gap: 20px;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .brand-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            background-color: var(--accent-black);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
             justify-content: center;
-            flex-wrap: wrap;
-            margin: 30px 0 50px;
+            color: #ffffff;
+            font-size: 20px;
         }
-        .btn {
-            display: inline-block;
-            padding: 14px 28px;
-            font-size: 1.05rem;
+
+        .brand-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 22px;
+            color: var(--text-heading);
+            letter-spacing: -0.3px;
+        }
+
+        .brand-sub {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .badge-active {
+            background-color: #ecfdf5;
+            color: #047857;
+            font-size: 12px;
             font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            border: 1px solid #a7f3d0;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .badge-active::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background-color: var(--accent-green);
+            border-radius: 50%;
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 32px;
+            margin-bottom: 48px;
+            align-items: start;
+        }
+
+        @media (max-width: 900px) {
+            .hero-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--surface-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: var(--shadow-soft);
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-hover);
+            border-color: var(--border-hover);
+        }
+
+        .card-header-icon {
+            font-size: 24px;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        h1.hero-heading {
+            font-family: 'DM Serif Display', serif;
+            font-size: 36px;
+            color: var(--text-heading);
+            line-height: 1.25;
+            margin-bottom: 14px;
+            letter-spacing: -0.4px;
+        }
+
+        p.hero-desc {
+            font-size: 15px;
+            color: var(--text-body);
+            margin-bottom: 28px;
+        }
+
+        .download-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .download-pill {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 14px 20px;
             text-decoration: none;
-            border-radius: 8px;
-            transition: transform 0.2s, box-shadow 0.2s;
+            color: var(--text-heading);
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s ease;
         }
-        .btn-primary {
-            background-color: var(--accent-orange);
+
+        .download-pill:hover {
+            border-color: var(--accent-black);
+            background-color: #f8fafc;
+            transform: translateX(4px);
+        }
+
+        .download-pill.primary {
+            background-color: var(--accent-black);
             color: #ffffff;
-            box-shadow: 0 4px 14px rgba(234, 88, 12, 0.4);
+            border-color: var(--accent-black);
         }
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(234, 88, 12, 0.6);
-        }
-        .btn-secondary {
-            background-color: #334155;
-            color: #ffffff;
-        }
-        .btn-secondary:hover {
-            background-color: #475569;
+
+        .download-pill.primary:hover {
+            background-color: #1e293b;
             transform: translateY(-2px);
         }
+
+        .pill-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .arrow-icon {
+            font-size: 16px;
+            transition: transform 0.2s ease;
+        }
+
+        .download-pill:hover .arrow-icon {
+            transform: translateX(4px);
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .spec-box {
+            background-color: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 14px;
+        }
+
+        .spec-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .spec-value {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-heading);
+        }
+
+        .section-heading {
+            font-family: 'DM Serif Display', serif;
+            font-size: 26px;
+            color: var(--text-heading);
+            margin-bottom: 8px;
+        }
+
+        .section-sub {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 28px;
+        }
+
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
         }
-        .feature-card {
-            background-color: var(--card-bg);
-            border: 1px solid #334155;
-            border-radius: 10px;
-            padding: 24px;
+
+        .feature-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 20px;
+            color: var(--text-heading);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        .feature-card h3 {
-            color: #fb923c;
-            margin-top: 0;
+
+        .feature-text {
+            font-size: 14px;
+            color: var(--text-body);
         }
-        footer {
+
+        .footer {
+            background-color: var(--surface-card);
+            border-top: 1px solid var(--border-color);
+            padding: 40px 24px;
             text-align: center;
-            padding: 40px 0;
-            border-top: 1px solid #334155;
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 13px;
+        }
+
+        .team-names {
+            color: var(--text-heading);
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 6px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>⚡ AURA STUDIO 2.0</h1>
-            <p class="subtitle">8085 Microprocessor Simulator & Assembly IDE for Windows</p>
-            <div class="download-box">
-                <a href="AuraStudio_Setup_v2.0.exe" class="btn btn-primary">🚀 Download Windows Installer (.exe)</a>
-                <a href="AURA-Studio-v2.0-Windows.zip" class="btn btn-secondary">📦 Download Portable Zip (.zip)</a>
-                <a href="Aura_Studio_Documentation.pdf" class="btn btn-secondary">📄 44-Page PDF Manual</a>
-            </div>
-        </header>
 
+    <!-- Header Navigation -->
+    <nav class="navbar">
+        <div class="brand-box">
+            <div class="brand-icon">⚡</div>
+            <div>
+                <div class="brand-title">AURA STUDIO</div>
+                <div class="brand-sub">8085 Microprocessor Simulator & Assembly IDE</div>
+            </div>
+        </div>
+        <div class="badge-active">
+            v2.0 STABLE RELEASE
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="container">
+        
+        <!-- Hero Section -->
+        <section class="hero-section">
+            
+            <!-- Hero Left Card -->
+            <div class="card">
+                <div class="card-header-icon">⚡</div>
+                <h1 class="hero-heading">8085 Microprocessor Simulator & Hardware IDE</h1>
+                <p class="hero-desc">
+                    Designed for academic excellence and hardware learning. Write 8085 assembly code, step through cycle-accurate execution, and interact with real-time hardware visualizers without physical trainer kit hardware.
+                </p>
+
+                <div class="download-list">
+                    <a href="AuraStudio_Setup_v2.0.exe" class="download-pill primary">
+                        <div class="pill-left">
+                            <span>🚀</span>
+                            <span>Download 1-Click Windows Setup (.exe)</span>
+                        </div>
+                        <span class="arrow-icon">→</span>
+                    </a>
+
+                    <a href="AURA-Studio-v2.0-Windows.zip" class="download-pill">
+                        <div class="pill-left">
+                            <span>📦</span>
+                            <span>Download Portable Release (.zip)</span>
+                        </div>
+                        <span class="arrow-icon">→</span>
+                    </a>
+
+                    <a href="Aura_Studio_Documentation.pdf" class="download-pill">
+                        <div class="pill-left">
+                            <span>📄</span>
+                            <span>Official 44-Page User Manual (PDF)</span>
+                        </div>
+                        <span class="arrow-icon">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Right Card: System Info -->
+            <div class="card">
+                <div class="card-header-icon">⚙️</div>
+                <h2 style="font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--text-heading); margin-bottom: 12px;">System Requirements</h2>
+                <p style="font-size: 14px; color: var(--text-body); margin-bottom: 16px;">
+                    Runs seamlessly on Windows 10 & 11 (64-bit). Bundles standalone Java runtime for zero configuration setup.
+                </p>
+
+                <div class="spec-grid">
+                    <div class="spec-box">
+                        <div class="spec-label">PLATFORM</div>
+                        <div class="spec-value">Windows 10 / 11</div>
+                    </div>
+                    <div class="spec-box">
+                        <div class="spec-label">JAVA ENGINE</div>
+                        <div class="spec-value">Bundled (No JDK needed)</div>
+                    </div>
+                    <div class="spec-box">
+                        <div class="spec-label">LICENSE</div>
+                        <div class="spec-value">GNU Open Source</div>
+                    </div>
+                    <div class="spec-box">
+                        <div class="spec-label">FILE SIZE</div>
+                        <div class="spec-value">28.9 MB Setup</div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Feature Section -->
         <section>
-            <h2>✨ Why AURA STUDIO is the #1 8085 Simulator</h2>
-            <p>AURA STUDIO is a state-of-the-art integrated development environment built for learning, programming, and understanding the Intel 8085 microprocessor architecture. It reproduces internal processor behavior with cycle accuracy and provides interactive hardware visualizers for hands-on learning without needing physical trainer kit hardware.</p>
+            <h2 class="section-heading">Hardware Peripheral Visualizers</h2>
+            <p class="section-sub">Real-time interactive port-driven hardware modules embedded inside the IDE.</p>
 
             <div class="features-grid">
-                <div class="feature-card">
-                    <h3>💻 Assembly Code Editor</h3>
-                    <p>Syntax highlighting, autocorrect, auto-indentation, error checking, and assembler directives (ORG, BEGIN, END, EQU, DB, DW, DS).</p>
+                <div class="card">
+                    <div class="feature-title">📺 7-Segment LED Display</div>
+                    <p class="feature-text">Direct BCD/Hex decoding, raw bitmask layout (a-g, dp), and multiplexed 4-digit / 8-digit display drivers.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>📺 Hardware Visualizers</h3>
-                    <p>Built-in simulators for 7-Segment LED Displays, 8-Bit ADC/DAC Oscilloscope, 4-Way Traffic Light Junction, Stepper Motor, and 16x2 HD44780 LCD.</p>
+
+                <div class="card">
+                    <div class="feature-title">🌊 ADC/DAC Waveform Oscilloscope</div>
+                    <p class="feature-text">Real-time digital storage oscilloscope telemetry for Sine, Sawtooth, Triangle & Square wave generation.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>⏱️ Step Debugger</h3>
-                    <p>Supports forward and backward step traversal, breakpoints, memory heatmaps, and multi-format register inspections.</p>
+
+                <div class="card">
+                    <div class="feature-title">🚦 4-Way Traffic Light Controller</div>
+                    <p class="feature-text">Simulates urban 4-phase road intersections with N-S and E-W signals plus pedestrian WALK indicators.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>📟 Trainer Kit Emulator</h3>
-                    <p>Full 8085 trainer kit keypad interface (RESET, HALT, SET/MEM, INR, DCR, GO, EXEC) mirroring physical laboratory hardware.</p>
+
+                <div class="card">
+                    <div class="feature-title">🌀 Stepper Motor Motion Simulator</div>
+                    <p class="feature-text">Unipolar 4-coil stepper rotor motion visualizer supporting Full-Step CW/CCW and 8-step Half-Stepping microstepping.</p>
+                </div>
+
+                <div class="card">
+                    <div class="feature-title">📟 16x2 Character LCD (HD44780)</div>
+                    <p class="feature-text">Hitachi HD44780 controller emulator supporting full 8-bit command set and DDRAM character rendering.</p>
+                </div>
+
+                <div class="card">
+                    <div class="feature-title">📟 8085 Trainer Kit Emulator</div>
+                    <p class="feature-text">Full 8085 trainer kit keypad interface (RESET, HALT, SET/MEM, INR, DCR, GO, EXEC) mirroring physical hardware boards.</p>
                 </div>
             </div>
         </section>
 
-        <footer>
-            <p><strong>Developed by Dev Gondaliya · Dev Letwala · Jigar Ghoghari</strong></p>
-            <p>Originally created by Jubin Mitra under GNU Open Source License.</p>
-        </footer>
-    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="team-names">Developed by Dev Gondaliya · Dev Letwala · Jigar Ghoghari</div>
+        <div>Originally created by Jubin Mitra under GNU Open Source License</div>
+    </footer>
+
 </body>
 </html>
