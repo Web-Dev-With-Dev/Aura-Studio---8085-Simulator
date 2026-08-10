@@ -15,6 +15,7 @@ The project is migrated from codeplex (http://8085simulator.codeplex.com/) to gi
 
 - **[Download Windows 1-Click Setup (AuraStudio_Setup_v2.0.exe)](AuraStudio_Setup_v2.0.exe)** ----> 8085 Simulator Version 2 (1-Click Windows Setup Installer)
 - **[Download macOS Disk Image (AuraStudio_v2.0_macOS.dmg)](AuraStudio_v2.0_macOS.dmg)** ----> 1-Click macOS Disk Image (.dmg) for Apple Silicon & Intel Mac
+- **[Download Linux Package (AURA-Studio-v2.0-Linux.zip)](AURA-Studio-v2.0-Linux.zip)** ----> Linux Package for Ubuntu, Debian, Fedora, Arch & Linux Mint
 - **[Download Windows Portable Zip (AURA-Studio-v2.0-Windows.zip)](AURA-Studio-v2.0-Windows.zip)** ----> Windows Portable Package (No installation required)
 - **[Download User Manual PDF (Aura_Studio_Documentation.pdf)](Aura_Studio_Documentation.pdf)** ---> Official 44-Page User & Reference Manual
 
@@ -33,6 +34,18 @@ When running `AuraStudio_Setup_v2.0.exe` for the first time on a new Windows PC,
 1. Download `AuraStudio_v2.0_macOS.dmg` (or `AURA-Studio-v2.0-macOS.zip`).
 2. Double-click to open `AURA STUDIO.app`.
 3. Drag `AURA STUDIO.app` into your Applications folder and double-click to launch.
+
+### On Linux (Ubuntu, Debian, Fedora, Arch Linux, Linux Mint):
+1. Download and extract `AURA-Studio-v2.0-Linux.zip`.
+2. Open Terminal in the extracted folder and run:
+   ```bash
+   chmod +x launch_linux.sh
+   ./launch_linux.sh
+   ```
+3. Alternatively, launch directly via Java:
+   ```bash
+   java -jar dist/AuraSimulator.jar
+   ```
 
 ---
 
