@@ -9,17 +9,24 @@ The software is shared under opensource GNU license.
 
 ---
 
-## Recommended Download (Version 2.0 Stable Release)
+## 📥 DOWNLOAD AURA STUDIO
 
-- **[ AuraStudio_Setup_v2.0.exe](AuraStudio_Setup_v2.0.exe)** ----> 8085 Simulator Version 2 (Recent and stable 1-Click Windows Setup Installer)
-- **[ AURA-Studio-v2.0-Windows.zip](AURA-Studio-v2.0-Windows.zip)** ----> Portable Release Package (No installation required)
-- **[ Aura_Studio_Documentation.pdf](Aura_Studio_Documentation.pdf)** ---> Official 44-Page User & Reference Manual
+- **[🚀 Download AuraStudio_Setup_v2.0.exe (Recommended Windows Installer)](AuraStudio_Setup_v2.0.exe)** ----> 8085 Simulator Version 2 (1-Click Windows Setup Installer)
+- **[📦 Download AURA-Studio-v2.0-Windows.zip (Windows Portable Zip)](AURA-Studio-v2.0-Windows.zip)** ----> Windows Portable Package (No installation required)
+- **[🍎 Download AURA-Studio-v2.0-macOS.zip (macOS Package)](AURA-Studio-v2.0-macOS.zip)** ----> macOS Package (Unzip & double-click `Launch AURA SIMULATOR.command`)
+- **[📄 Download Aura_Studio_Documentation.pdf](Aura_Studio_Documentation.pdf)** ---> Official 44-Page User & Reference Manual
 
 ---
 
-## How to Run the Program?
+## ❓ How to Run the Program?
 
-Simply double-clicking the program (`AuraStudio_Setup_v2.0.exe` or `AuraStudioLauncher.vbs`), it should run cleanly. But if a `.jar` file opens like a zip file, then you can be rest assured that you do not have Java installed on your machine. Then download it from the link given below or run the Windows installer which bundles Java automatically.
+### On Windows:
+Double-click `AuraStudio_Setup_v2.0.exe` or `AuraStudioLauncher.vbs`. If running raw `.jar`, ensure Java is installed.
+
+### On macOS (Apple Silicon M1/M2/M3/M4 & Intel Mac):
+1. Download and unzip `AURA-Studio-v2.0-macOS.zip`.
+2. Double-click `Launch AURA SIMULATOR.command` (or in Terminal run `chmod +x "Launch AURA SIMULATOR.command"` then `./Launch\ AURA\ SIMULATOR.command`).
+3. Alternatively, open Terminal and run `java -jar dist/AuraSimulator.jar`.
 
 ### System Requirements:
 - **Windows 10 / 11 (64-Bit)**
