@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AURA STUDIO — 8085 Microprocessor Simulator & Assembly IDE</title>
-    <!-- AURA STUDIO 2.0 Official Landing Page - Build 2026.08.10 -->
-    <meta name="description" content="AURA STUDIO 8085 Simulator - The definitive 8085 microprocessor simulator & assembly IDE for Windows. Cycle-accurate simulation with 7-Segment, ADC/DAC Oscilloscope, Stepper Motor, Traffic Light & HD44780 LCD visualizers.">
-    <meta name="keywords" content="8085 simulator, 8085 simulator github, 8085 microprocessor simulator download, 8085 assembly ide, 8085 trainer kit emulator, 8085 simulator windows 11">
+    <meta name="description" content="AURA STUDIO 8085 Simulator - The definitive 8085 microprocessor simulator & assembly IDE for Windows and macOS. Cycle-accurate simulation with 7-Segment, ADC/DAC Oscilloscope, Stepper Motor, Traffic Light & HD44780 LCD visualizers.">
+    <meta name="keywords" content="8085 simulator, 8085 simulator github, 8085 microprocessor simulator download, 8085 assembly ide, 8085 trainer kit emulator, 8085 simulator windows 11, 8085 simulator mac">
     <meta name="author" content="Dev Gondaliya, Dev Letwala, Jigar Ghoghari, Jubin Mitra">
     <meta name="google-site-verification" content="google6ec5c298bafaaaa4">
 
+    <!-- Google Fonts: DM Serif Display & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,7 +25,6 @@
             --border-hover: #cbd5e1;
             --accent-black: #0f172a;
             --accent-green: #10b981;
-            --accent-orange: #ea580c;
             --shadow-soft: 0 10px 30px -5px rgba(15, 23, 42, 0.05), 0 4px 12px -2px rgba(15, 23, 42, 0.03);
             --shadow-hover: 0 20px 40px -10px rgba(15, 23, 42, 0.08), 0 8px 16px -4px rgba(15, 23, 42, 0.04);
         }
@@ -62,21 +61,9 @@
             gap: 12px;
         }
 
-        .brand-icon {
-            width: 38px;
-            height: 38px;
-            background-color: var(--accent-black);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ffffff;
-            font-size: 20px;
-        }
-
         .brand-title {
             font-family: 'DM Serif Display', serif;
-            font-size: 22px;
+            font-size: 24px;
             color: var(--text-heading);
             letter-spacing: -0.3px;
         }
@@ -92,7 +79,7 @@
             color: #047857;
             font-size: 12px;
             font-weight: 600;
-            padding: 4px 10px;
+            padding: 4px 12px;
             border-radius: 20px;
             border: 1px solid #a7f3d0;
             display: inline-flex;
@@ -140,12 +127,6 @@
         .card:hover {
             box-shadow: var(--shadow-hover);
             border-color: var(--border-hover);
-        }
-
-        .card-header-icon {
-            font-size: 24px;
-            margin-bottom: 12px;
-            display: inline-block;
         }
 
         h1.hero-heading {
@@ -199,21 +180,6 @@
         .download-pill.primary:hover {
             background-color: #1e293b;
             transform: translateY(-2px);
-        }
-
-        .pill-left {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .arrow-icon {
-            font-size: 16px;
-            transition: transform 0.2s ease;
-        }
-
-        .download-pill:hover .arrow-icon {
-            transform: translateX(4px);
         }
 
         .spec-grid {
@@ -270,9 +236,6 @@
             font-size: 20px;
             color: var(--text-heading);
             margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
         .feature-text {
@@ -302,7 +265,6 @@
     <!-- Header Navigation -->
     <nav class="navbar">
         <div class="brand-box">
-            <div class="brand-icon">⚡</div>
             <div>
                 <div class="brand-title">AURA STUDIO</div>
                 <div class="brand-sub">8085 Microprocessor Simulator & Assembly IDE</div>
@@ -323,40 +285,24 @@
             <div class="card">
                 <h1 class="hero-heading">8085 Microprocessor Simulator & Hardware IDE</h1>
                 <p class="hero-desc">
-                    Designed for academic excellence and hardware learning. Write 8085 assembly code, step through cycle-accurate execution, and interact with real-time hardware visualizers without physical trainer kit hardware.
+                    Designed for academic learning. Write 8085 assembly code, step through cycle-accurate execution, and interact with real-time hardware visualizers without physical trainer kit hardware.
                 </p>
 
                 <div class="download-list">
                     <a href="AuraStudio_Setup_v2.0.exe" download="AuraStudio_Setup_v2.0.exe" class="download-pill primary">
-                        <div class="pill-left">
-                            <span>🚀</span>
-                            <span>Download 1-Click Windows Setup (.exe)</span>
-                        </div>
-                        <span class="arrow-icon">↓</span>
+                        <span>Download 1-Click Windows Setup (.exe)</span>
                     </a>
 
                     <a href="AuraStudio_v2.0_macOS.dmg" download="AuraStudio_v2.0_macOS.dmg" class="download-pill">
-                        <div class="pill-left">
-                            <span>🍎</span>
-                            <span>Download 1-Click macOS Disk Image (.dmg)</span>
-                        </div>
-                        <span class="arrow-icon">↓</span>
+                        <span>Download 1-Click macOS Disk Image (.dmg)</span>
                     </a>
 
                     <a href="AURA-Studio-v2.0-Windows.zip" download="AURA-Studio-v2.0-Windows.zip" class="download-pill">
-                        <div class="pill-left">
-                            <span>📦</span>
-                            <span>Download 1-Click Windows Portable (.zip)</span>
-                        </div>
-                        <span class="arrow-icon">↓</span>
+                        <span>Download 1-Click Windows Portable (.zip)</span>
                     </a>
 
                     <a href="Aura_Studio_Documentation.pdf" download="Aura_Studio_Documentation.pdf" class="download-pill">
-                        <div class="pill-left">
-                            <span>📄</span>
-                            <span>Official 44-Page User Manual (PDF)</span>
-                        </div>
-                        <span class="arrow-icon">↓</span>
+                        <span>Official 44-Page User Manual (PDF)</span>
                     </a>
                 </div>
             </div>
@@ -365,31 +311,31 @@
             <div class="card">
                 <h2 style="font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--text-heading); margin-bottom: 12px;">System Requirements</h2>
                 <p style="font-size: 14px; color: var(--text-body); margin-bottom: 16px;">
-                    Runs seamlessly on Windows 10 & 11 (64-bit). Bundles standalone Java runtime for zero configuration setup.
+                    Runs seamlessly on Windows 10, Windows 11, and macOS (Apple Silicon & Intel).
                 </p>
 
                 <div class="spec-grid">
                     <div class="spec-box">
-                        <div class="spec-label">PLATFORM</div>
+                        <div class="spec-label">WINDOWS</div>
                         <div class="spec-value">Windows 10 / 11</div>
                     </div>
                     <div class="spec-box">
-                        <div class="spec-label">JAVA ENGINE</div>
-                        <div class="spec-value">Bundled (No JDK needed)</div>
+                        <div class="spec-label">MACOS</div>
+                        <div class="spec-value">M1/M2/M3/M4 & Intel</div>
                     </div>
                     <div class="spec-box">
                         <div class="spec-label">LICENSE</div>
                         <div class="spec-value">GNU Open Source</div>
                     </div>
                     <div class="spec-box">
-                        <div class="spec-label">FILE SIZE</div>
+                        <div class="spec-label">INSTALLER</div>
                         <div class="spec-value">28.9 MB Setup</div>
                     </div>
                 </div>
 
                 <div style="margin-top: 16px; padding: 12px 14px; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 12.5px; color: #475569;">
-                    <strong>🛡️ First-Time Windows Installation Note:</strong><br>
-                    If Windows Defender SmartScreen shows <em>"Windows protected your PC"</em>, click <strong>"More info"</strong> ➔ <strong>"Run anyway"</strong>. AURA STUDIO is 100% safe, clean, and virus-free.
+                    <strong>First-Time Windows Installation Note:</strong><br>
+                    If Windows Defender SmartScreen shows <em>"Windows protected your PC"</em>, click <strong>"More info"</strong> -> <strong>"Run anyway"</strong>. AURA STUDIO is 100% safe, clean, and open-source.
                 </div>
             </div>
 
@@ -417,7 +363,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="feature-title"> Stepper Motor Motion Simulator</div>
+                    <div class="feature-title">Stepper Motor Motion Simulator</div>
                     <p class="feature-text">Unipolar 4-coil stepper rotor motion visualizer supporting Full-Step CW/CCW and 8-step Half-Stepping microstepping.</p>
                 </div>
 
@@ -437,7 +383,8 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="team-names">Developed by <b>Dev Gondaliya</b> · <b>Dev Letwala</b> · <b>Jigar Ghoghari</b></div>
+        <div class="team-names">Developed by Dev Gondaliya · Dev Letwala · Jigar Ghoghari</div>
+        <div>Originally created by Jubin Mitra under GNU Open Source License</div>
     </footer>
 
 </body>
