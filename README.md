@@ -25,6 +25,10 @@ Simply double-clicking the program (`AuraStudio_Setup_v2.0.exe` or `AuraStudioLa
 - **Windows 10 / 11 (64-Bit)**
 - **Java Runtime**: Java 17+ (Bundled inside installer, or downloadable from [Oracle Java Downloads](https://www.oracle.com/java/technologies/downloads/))
 
+> 🛡️ **Note on Windows Defender SmartScreen**:  
+> When running `AuraStudio_Setup_v2.0.exe` for the first time on a new Windows PC, Microsoft Defender SmartScreen may display a *"Windows protected your PC"* pop-up because the binary is newly released.  
+> **To Install**: Click **"More info"** ➔ Click **"Run anyway"**. AURA STUDIO is 100% safe, clean, and open-source.
+
 ---
 
 ## --> Features
