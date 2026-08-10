@@ -11,12 +11,12 @@ The project is migrated from codeplex ([http://8085simulator.codeplex.com/](http
 
 ---
 
-## 📥 DOWNLOAD AURA STUDIO
+## 📥 DIRECT 1-CLICK DOWNLOADS
 
-- **[🚀 Download AuraStudio_Setup_v2.0.exe (Windows Setup Installer)](AuraStudio_Setup_v2.0.exe)** ----> 8085 Simulator Version 2 (1-Click Windows Setup Installer)
-- **[📦 Download AURA-Studio-v2.0-Windows.zip (Windows Portable Package)](AURA-Studio-v2.0-Windows.zip)** ----> Windows Portable Package (No installation required)
-- **[🍎 Download AURA-Studio-v2.0-macOS.zip (macOS .app Bundle)](AURA-Studio-v2.0-macOS.zip)** ----> Native macOS `AURA STUDIO.app` Bundle (Apple Silicon M1/M2/M3/M4 & Intel Mac)
-- **[📄 Download Aura_Studio_Documentation.pdf](Aura_Studio_Documentation.pdf)** ---> Official 44-Page User & Reference Manual
+- **[🚀 Download 1-Click Windows Setup (AuraStudio_Setup_v2.0.exe)](AuraStudio_Setup_v2.0.exe)** ----> 8085 Simulator Version 2 (1-Click Windows Setup Installer)
+- **[🍎 Download 1-Click macOS Package (AURA-Studio-v2.0-macOS.zip)](AURA-Studio-v2.0-macOS.zip)** ----> 1-Click macOS `AURA STUDIO.app` Package (Apple Silicon M1/M2/M3/M4 & Intel Mac)
+- **[📦 Download 1-Click Windows Portable (AURA-Studio-v2.0-Windows.zip)](AURA-Studio-v2.0-Windows.zip)** ----> Windows Portable Package (No installation required)
+- **[📄 Download 1-Click PDF Manual (Aura_Studio_Documentation.pdf)](Aura_Studio_Documentation.pdf)** ---> Official 44-Page User & Reference Manual
 
 ---
 
